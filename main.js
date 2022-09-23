@@ -5,9 +5,6 @@ const anchorX = rekt.left + rekt.width / 2;
 const anchorY = rekt.top + rekt.height / 2;
 
 
-
-
-
 document.addEventListener('mousemove', (e) =>{
     console.log(e)
 
@@ -16,12 +13,12 @@ document.addEventListener('mousemove', (e) =>{
     const angleDeg = angle (mouseX,mouseY,anchorX,anchorY);
     
     console.log(angleDeg)
-
+    
     eyes.forEach(eye =>{
         eye.style.transform = 'rotate(${90 + angleDeg}deg)';
         anchor.style.filter = 'hue-rotate(${angleDeg}deg)';
     })
-
+    
 })
 
 
